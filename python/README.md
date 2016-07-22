@@ -17,10 +17,10 @@ take me a little time to upload everything, so keep checking back for more.
 
 ### Links to other GitHub Repositories
 
-[C++](https://github.com/seanhayes13/cplusplus)
+[C++](../cplusplus)
 
-[C*#*](https://github.com/seanhayes13/csharp)
+[C*#*](../csharp)
 
-[Java](https://github.com/seanhayes13/java)
+[Java](../java)
 
-[Web Development](https://github.com/seanhayes13/webdev)
+[Web Development](../webdev)
