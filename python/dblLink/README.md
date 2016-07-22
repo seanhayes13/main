@@ -1,4 +1,4 @@
-[Back to Python Main](https://github.com/seanhayes13/python)
+[Back to Python Main](../)
 
 # Double Link List
 
