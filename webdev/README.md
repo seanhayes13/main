@@ -9,11 +9,11 @@ I am slowly loading some of the code I am using into here so keep checking back 
 
 ### Sections Loaded So Far:
 
-  * [Address Book](addressbook)
+  * [Address Book](addressBook)
     * A simple address book for names, addresses, phone numbers, and emails
-  * [Caesar Cipher](caesarcipher)
+  * [Caesar Cipher](caesarCipher)
     * A Caesar Cipher encryption and decryption program
-  * [Movie Database](moviedatabase)
+  * [Movie Database](movieDatabase)
     * Populate Movie/Actor intermediate table using PHP
 
 For live examples of many of these, visit my web site at www.runninmancoding.com
