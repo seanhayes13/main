@@ -1,4 +1,4 @@
-[Back to Web Development Main](../../../../webdev)
+[Back to Web Development Main](../)
 
 # Movie Database Files
 ## HTML, PHP and SQL code used to mass upload information into my Movie Database
