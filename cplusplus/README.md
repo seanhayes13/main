@@ -1,4 +1,4 @@
-[Back to Main](..)
+[Back to Main](/)
 
 # C++
 
