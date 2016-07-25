@@ -2,4 +2,4 @@
 
 # Caesar Cipher
 
-This is a Java program based on the same concept that I have also written in [Python](../../python/caesarcipher), [JavaScript](../../webdev/caesarcipher), and [C#](../../csharp/caesarcipher)
+This is a Java program based on the same concept that I have also written in [Python](../../python/caesarcipher), [JavaScript](../../webdev/caesarCipher), and [C#](../../csharp/caesarcipher)
