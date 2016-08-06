@@ -16,7 +16,7 @@ I am slowly loading some of the code I am using into here so keep checking back 
   * [Caesar Cipher](caesarCipher)
     * A Caesar Cipher encryption and decryption program
   * [codepen.io](http://codepen.io/seanhayes/#)
-    * A collection of pages built while working through FreeCodeCamp's classes
+    * A collection of pages built while working through FreeCodeCamp's classes.
       * A [Tribute Page](http://codepen.io/seanhayes/pen/QEBpJP) to any figure we chose
       * A [Portfolio](http://codepen.io/seanhayes/pen/akjVBQ) page, what else is there to say
   * [Movie Database](movieDatabase)
