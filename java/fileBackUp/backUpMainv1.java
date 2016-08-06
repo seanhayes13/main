@@ -25,11 +25,11 @@ public class backUpMain {
 	public static void main(String[] args){
 		HashMap<String,String> dirList = new HashMap<String,String>();
 		//dirList.put("test", "C:\\test");
-		dirList.put("python", "C:\\Users\\runni\\Documents\\Python Scripts");
-		dirList.put("csharp-cplusplus", "C:\\Users\\runni\\Documents\\Visual Studio 2013\\Projects");
-		dirList.put("android", "C:\\Users\\runni\\Documents\\AndroidProjects");
-		dirList.put("java", "C:\\Users\\runni\\Desktop\\workspace");
-		dirList.put("webdev", "C:\\xampp\\htdocs");
+		dirList.put("python", "removed");
+		dirList.put("csharp-cplusplus", "removed");
+		dirList.put("android", "removed");
+		dirList.put("java", "removed");
+		dirList.put("webdev", "removed");
 		LocalDate dNow = LocalDate.now();
 		LocalDateTime dtNow = LocalDateTime.now();
 		DateTimeFormatter df2 = DateTimeFormatter.ofPattern("yyyyMMddHHmm");
