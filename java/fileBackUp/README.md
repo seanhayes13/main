@@ -138,3 +138,9 @@ as above.
 			}
 		}
 ```
+
+## Other plans
+
+* Build a simple GUI with a button to start the process, display what has been done, and tell me when the whole process is done
+* Read the file locations from a file instead of being hard coded into the program itself
+* Let the user select which folders to backup and save that information to the external file
