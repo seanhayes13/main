@@ -146,3 +146,10 @@ as above.
 * Build a simple GUI with a button to start the process, display what has been done, and tell me when the whole process is done
 * Read the file locations from a file instead of being hard coded into the program itself
 * Let the user select which folders to backup and save that information to the external file
+
+## Update 18 September 2016
+
+So my plans for this little program have expanded a little and I've been busy working out the bugs in those new plans.
+Among the new things I have been working on include multithreading to make the process faster and a little more complex GUI than originally planned. I was thinking about using an embedded database to store some information but realized that the program doesn't really store that much information. I am also breaking down the code so that instead of one massive file, there will be a MVC structure.
+
+I will add in some of the new pieces when I get a chance.
