@@ -99,6 +99,7 @@ I'll get to the purpose of that in a minute. On the first run through I noticed 
 section was pulling a lot of folders whose files I wasn't working with, so there was no need 
 to bring them over. I started with an Array turned HashSet of the folders I do want to copy over:
 
+
 ```
 		Set<String> folderList = new HashSet<String>(Arrays.asList(new String[]
 				{"htdocs","css","php","js","login"}));
@@ -109,7 +110,7 @@ I use this variable to check for when the program is working with the webdev dir
 the current folder is in the folderList I created above. If the program is working with the webdev
 set and the current folder is in that set, it will create the folder, if not, it skips over it.
 
-```
+ ```
 		if(in.isDirectory()){
 			if (loc == "webdev" && folderList.contains(in.getName())){ //only needed for webdev
 					if(!out.exists()){
@@ -153,3 +154,9 @@ So my plans for this little program have expanded a little and I've been busy wo
 Among the new things I have been working on include multithreading to make the process faster and a little more complex GUI than originally planned. I was thinking about using an embedded database to store some information but realized that the program doesn't really store that much information. I am also breaking down the code so that instead of one massive file, there will be a MVC structure.
 
 I will add in some of the new pieces when I get a chance.
+
+## Update 18 December 2016
+
+Well, so much for updating this every other week or so as I developed the program. That just morphed into writing the program and "I'll update the GitHub page tomorrow...".
+
+Three months later and the program is nearly complete. Just need to run a few tests and clean up the GUI. What have I completed since September? The multithreading is working like a charm, I've built up a fairly decent GUI with tabbed pages, hidden elements that hide or reveal themselves based on user choices, and instead of saving the details of the save configurations to a text file I was able to get a simple database working (not embedded as originally hoped, but still more than just exporting objects to a file). I will be loading some of the code in the next week or so (if I remember...)
