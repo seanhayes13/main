@@ -1,4 +1,4 @@
-[Back to Battleship Main](README.md)
+[Back to Battleship Main](README.md#attackresult-and-orientation)
 
 #Enums
 
