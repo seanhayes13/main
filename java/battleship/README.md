@@ -11,9 +11,9 @@ I'll be uploading my solution here in the next few weeks but here's is a brief r
 
 ##Classes
 
-###Ship
+###[Ship](ship.md)
 
-The [Ship](ship.md) class was used as a parent class for each of the individual ships (Carrier,
+The Ship class was used as a parent class for each of the individual ships (Carrier,
 Battleship, Cruiser, Submarine, and Destroyer) with only a few functions being overriden.
 
 ###GridPosition
