@@ -1,5 +1,7 @@
 [Back to Java Main](../)
 
+[Back to Battleship Main](README.md#Classes)
+
 #Battleship
 
 For my last term on my Bachelor's degree I took a Java class to fill in some space. 
