@@ -4,4 +4,8 @@
 
 ##AttackResult
 
+Details coming soon
+
 ##Orientation
+
+Details coming soon
