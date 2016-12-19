@@ -16,16 +16,16 @@ I'll be uploading my solution here in the next few weeks but here's is a brief r
 The Ship class was used as a parent class for each of the individual ships (Carrier,
 Battleship, Cruiser, Submarine, and Destroyer) with only a few functions being overriden.
 
-###GridPosition
+###[GridPosition](gridPosition.md)
 
 Relatively simple class defining each of the grids on the game board.
 
-###GameBoard
+###[GameBoard](gameBoard.md)
 
 The GameBoard managed ship placement, a count of shots fired, checking the result of
 a shot during each turn, and a few other things.
 
-###AttackResult and Orientation
+###[AttackResult and Orientation](enums.md)
 
 Two enum classes to help track the result of an attack and the orientation of a ship
 when placing on the board.
