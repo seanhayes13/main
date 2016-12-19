@@ -11,3 +11,31 @@ that each ship occupies, keeping track of the ship's health, checking if the shi
 There are five additional child classes that use the Ship class as a parent, one for each of the five
 ships: Carrier, Battleship, Cruiser, Submarine, and Destroyer. The only changes they make over the
 parent is to return different values for ship size and ship type.
+
+##getBoardSpan
+
+This function takes a ship's starting location and orientation (set when the constructor is called),
+then adds that position, plus enough additional positions for the ship to an ArrayList and returns
+that list.
+
+```java
+	public ArrayList<GridPosition> getBoardSpan(){
+		ArrayList<GridPosition> result = new ArrayList<>();
+		int count = getSize();
+		int newCol = startLoc.column;
+		char newRow = startLoc.row;
+		if(orient == Orientation.HORIZONTAL){
+			for(int i = 0; i < count; i++){
+				result.add(new GridPosition(newRow,newCol));
+				newCol++;
+			}
+		}
+		if(orient == Orientation.VERTICAL){
+			for(int i = 0; i < count; i++){
+				result.add(new GridPosition(newRow,newCol));
+				newRow++;
+			}
+		}
+		return result;
+	}
+```
