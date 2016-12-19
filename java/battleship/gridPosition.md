@@ -1,3 +1,3 @@
-[Back to Battleship Main](README.md#classes)
+[Back to Battleship Main](README.md#gridposition)
 
 #GridPosition
