@@ -1,4 +1,4 @@
-[Back to Battleship Main](../)
+[Back to Battleship Main](readme.md)
 
 #Ship class
 
