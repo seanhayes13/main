@@ -1,6 +1,6 @@
 [Back to Java Main](../)
 
-[Back to Battleship Main](README.md#Classes)
+[Back to Battleship Main](README.md##Classes)
 
 #Battleship
 
