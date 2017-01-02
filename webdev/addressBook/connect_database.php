@@ -3,7 +3,7 @@
 function connectDB(){
 	global $mysqli;
 	
-	$mysqli = mysqli_connect("localhost", "root", "TWinOAks1#", "general_Info");
+	$mysqli = #hidden
 	
 	if (mysqli_connect_errno()){
 		printf("Connection failed: %s\n", mysqli_connect_errno());
