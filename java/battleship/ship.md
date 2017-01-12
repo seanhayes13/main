@@ -39,3 +39,21 @@ that list.
 		return result;
 	}
 ```
+
+##isDestroyed
+
+The isDestroyed method checks to see if a ship's health has been reduced to 0, ie, the ship has been
+sunk.
+
+```java
+	public boolean isDestroyed(){
+		if(health==0)return true;
+		else return false;
+	}
+```
+
+##Other methods
+
+There are a few other methods that are pretty self explanatory:
+- increaseDamage: Decreases a ship's health by one point
+- Ship: Constructor
