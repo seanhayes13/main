@@ -42,3 +42,13 @@ and this information is saved as part of the configuration files.
 ## FileCabinet
 
 You guessed it, this is the database itself.
+
+## Storage
+
+Starting with the FileCabinet, each element has a collection (with Java I used ArrayList) of the next level down:
+
+* FileCabinet has a list of drawer objects
+* Each drawer object has a list of page objects
+* Each page object has a list of node objects
+
+[Working with JSON](json.md)
