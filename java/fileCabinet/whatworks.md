@@ -14,4 +14,4 @@ I will try to add to this list when I make some break throughs
       * Display a list of known commands and their description
       * Exit
       
-[Back to the start](readme.md) | [JSON](json.md)
+[Back to the start](readme.md) | [JSON](json.md) | [Commands](commands.md)
