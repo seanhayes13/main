@@ -7,4 +7,4 @@ writing that whole list to one JSON file. Now you see why I saved the ID from th
 node. I may readdress this at some point down the road but it works. And before you ask, yes I do have a function that, after
 reading in the monster list of nodes, goes through them and rebuilds the Drawer-Page-Node structure.
 
-[Back to the start](readme.md)
+[Back to the start](readme.md) | [What Works?](whatworks.md) | [Commands](commands.md)
