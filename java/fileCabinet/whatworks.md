@@ -12,8 +12,8 @@ I will try to add to this list when I make some break throughs
     * findall: Returns all elements in the currently active level
     * help: Display a list of known commands
     * listfc: Display a list of all FileCabinets in the current directory
-    * loadalldrawers: loadalldrawers
-    * loaddrawer: loaddrawer
+    * loadalldrawers: Loads all of the Drawers associated with the selected FileCabinet
+    * loaddrawer: Loads only Drawer that the user specifies
     * loadfc: Load file cabinet configurations to the program
     * newdrawer: Create and add a new drawer to the active FileCabinet
     * newfc: Create a new FileCabinet with the option of setting the new FileCabinet as the active FileCabinet
