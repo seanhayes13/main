@@ -4,7 +4,7 @@ I will try to add to this list when I make some break throughs
 
 * 10 April
   * Added a lot of functionality including the first phases of the engine to control interacting with the FileCabinet, this 
-  is the actual output from running the help command of :
+  is the actual output from running the help command:
     * clearactivedrawer: Clear the FileCabinet's active drawer and work from the FileCabinet level.
     * clearactivefc: Clears the active FileCabinet in preparation of loading a new FileCabinet
     * clearactivepage: Clears the active Page before loading a new page. A new page can be added without running this command.
