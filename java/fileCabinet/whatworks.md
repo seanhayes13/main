@@ -2,17 +2,6 @@
 
 I will try to add to this list when I make some break throughs
 
-* 8 April
-   * Basic Node-Page-Drawer-FileCabinet (NPDF) system tested entering first and last name and age for four people
-   * Exporting to and importing from a JSON file
-   * Parsing the imported data from a list of nodes into the NPDF format
-* 9 April
-   * Save and upload FileCabinet and Drawer configurations including name of the FileCabinet and the current next ID
-   number for each drawer. Tested by adding a second Drawer of albums with group/artist names
-   * Started work on basic command prompt input class. What's working on this?
-      * Load a file cabinet
-      * Display a list of known commands and their description
-      * Exit
 * 10 April
   * Added a lot of functionality including the first phases of the engine to control interacting with the FileCabinet, this 
   is the actual output from running the help command of :
@@ -33,5 +22,16 @@ I will try to add to this list when I make some break throughs
     * selectpage: Set a page as the active page by providing the Page ID
   * The next big project is to work on saving changes, either automatically when a change is made or only when initiated by
   the user
+* 9 April
+   * Save and upload FileCabinet and Drawer configurations including name of the FileCabinet and the current next ID
+   number for each drawer. Tested by adding a second Drawer of albums with group/artist names
+   * Started work on basic command prompt input class. What's working on this?
+      * Load a file cabinet
+      * Display a list of known commands and their description
+      * Exit
+* 8 April
+   * Basic Node-Page-Drawer-FileCabinet (NPDF) system tested entering first and last name and age for four people
+   * Exporting to and importing from a JSON file
+   * Parsing the imported data from a list of nodes into the NPDF format
       
 [Back to the start](readme.md) | [JSON](json.md) | [Commands](commands.md)
