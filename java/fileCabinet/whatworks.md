@@ -5,21 +5,37 @@ I will try to add to this list when I make some break throughs
 * 10 April
   * Added a lot of functionality including the first phases of the engine to control interacting with the FileCabinet, this 
   is the actual output from running the help command:
-    * clearactivedrawer: Clear the FileCabinet's active drawer and work from the FileCabinet level.
-    * clearactivefc: Clears the active FileCabinet in preparation of loading a new FileCabinet
-    * clearactivepage: Clears the active Page before loading a new page. A new page can be added without running this command.
-    * exit: Exit the program
-    * findall: Returns all elements in the currently active level
-    * help: Display a list of known commands
-    * listfc: Display a list of all FileCabinets in the current directory
-    * loadalldrawers: Loads all of the Drawers associated with the selected FileCabinet
-    * loaddrawer: Loads only Drawer that the user specifies
-    * loadfc: Load file cabinet configurations to the program
-    * newdrawer: Create and add a new drawer to the active FileCabinet
-    * newfc: Create a new FileCabinet with the option of setting the new FileCabinet as the active FileCabinet
-    * newnode: Insert a new node onto the current page. A page must be selected.
-    * newpage: Add a new page to the active Drawer. An active FileCabinet must also be set.
-    * selectpage: Set a page as the active page by providing the Page ID
+```
+clearactivedrawer: Clear the FileCabinet's active drawer and work from the FileCabinet level.
+
+clearactivefc: Clears the active FileCabinet in preparation of loading a new FileCabinet
+
+clearactivepage: Clears the active Page before loading a new page. A new page can be added without running this command.
+
+exit: Exit the program
+
+findall: Returns all elements in the currently active level
+
+help: Display a list of known commands
+
+listfc: Display a list of all FileCabinets in the current directory
+
+loadalldrawers: Load all Drawers associated with the current FileCabinet
+
+loaddrawer: Load one Drawer
+
+loadfc: Load file cabinet configurations to the program
+
+newdrawer: Create and add a new drawer to the active FileCabinet.
+
+newfc: Create a new FileCabinet with the option of setting the new FileCabinet as the active FileCabinet
+
+newnode: Insert a new node onto the current page. A page must be selected.
+
+newpage: Add a new page to the active Drawer. An active FileCabinet must also be set.
+
+selectpage: Set a page as the active page by providing the Page ID
+```
   * The next big project is to work on saving changes, either automatically when a change is made or only when initiated by
   the user
 * 9 April
