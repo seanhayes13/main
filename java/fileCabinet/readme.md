@@ -28,6 +28,12 @@ string the key and an object the value (using an object so I can store any data-
 this to also include an ID number of the page and the drawer or collection it belongs to (I'll explain more later).
 Storing a person's first and last name would be two nodes, one for the first name and one for the last name.
 
+### NodeArray
+
+The NodeArray is a custom object for handling nodes that store arrays as their value. The example I have been using in 
+testing is groups where each page is one group. One Node is for the name of the group, and another Node is for the 
+members of that group. Each member is a NodeArray that has Nodes for first name, last name, and other identifiers.
+
 ## Page
 
 Groupings of related nodes, for those relational database users, this is equivalent to a record on a table. So each person
