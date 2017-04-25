@@ -2,6 +2,21 @@
 
 I will try to add to this list when I make some break throughs
 
+* 24 April
+So I haven't updated this list as regularly as I wanted to but I've reached a break point in the work so
+I am taking a chance to do a big upload of what is working (I'm not uploading the output from the help
+command like last time because that list is getting long).
+   * Unique print formats for Drawer, Page, Node, and NodeArray
+   * Created another structure, NodeArray, to handle storing arrays within a Node
+   * Functions for both adding a new NodeArray to a Node that already stores an array and for adding Nodes to an
+   existing NodeArray
+   * Updating the value of a Node, whether or not that Node is part of an array
+   * Stacking commands to reduce how many times to press the enter key. This allows the user to load a series of commands
+   that get run one after another instead of typing a command, enter, another command, enter, etc.
+   * Went back through and removed all throw statements, replacing with try-catch blocks, and updated documentation with
+   JavaDoc comments (may upload those here in the near future). Both of these actually helped identify some functions
+   that were no longer used.
+
 * 10 April
   * Added a lot of functionality including the first phases of the engine to control interacting with the FileCabinet, this 
   is the actual output from running the help command:
