@@ -6,6 +6,7 @@ I will try to add to this list when I make some break throughs
 So I haven't updated this list as regularly as I wanted to but I've reached a break point in the work so
 I am taking a chance to do a big upload of what is working (I'm not uploading the output from the help
 command like last time because that list is getting long).
+   * Basic CRUD operations are working and have been tested
    * Unique print formats for Drawer, Page, Node, and NodeArray
    * Created another structure, NodeArray, to handle storing arrays within a Node
    * Functions for both adding a new NodeArray to a Node that already stores an array and for adding Nodes to an
