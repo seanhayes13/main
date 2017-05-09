@@ -1,5 +1,5 @@
 [Back to Battleship Main](README.md#gameboard)
 
-#GameBoard
+# GameBoard
 
 Details coming soon
