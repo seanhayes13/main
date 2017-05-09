@@ -8,12 +8,16 @@ take me a little time to upload everything, so keep checking back for more.
 
 ### Sections Loaded So Far:
 
+  * [Battleship](battleship)
+    * A refactored version of a Java program
   * [Caesar Cipher](caesarcipher)
     * A Caesar Cipher encryption and decryption program
   * [Double Link List](dblLink)
     * A double link list data structure modified from a C++ program
   * [Machine Language Compiler](compiler)
     * A program that converts plain text to machine language and executes that code
+  * [Maze Game](mazegame)
+    * A simple game using sqlite3 and pygame
   * [Snippet Manager](snippetMgr)
     * A program that stores bits of code, tags, language, and notes
 
