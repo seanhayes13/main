@@ -36,3 +36,5 @@ Page.
 
 Obviously, if a collection with the same name exists on either side, the Drawer name and Page ID node are added to the 
 existing ForeignKeyList.
+
+[Main](readme.md) | [Working with JSON](json.md) | [What's Working?](whatworks.md) | [Commands](commands.md)
