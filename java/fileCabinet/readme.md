@@ -58,4 +58,4 @@ Starting with the FileCabinet, each element has a collection (with Java I used A
 * Each drawer object has a list of page objects
 * Each page object has a list of node objects
 
-[Working with JSON](json.md) | [What's Working?](whatworks.md) | [Commands](commands.md)
+[ForeignKeyList](fkl.md) | [Working with JSON](json.md) | [What's Working?](whatworks.md) | [Commands](commands.md)
