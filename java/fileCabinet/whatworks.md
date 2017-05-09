@@ -18,7 +18,7 @@ I am taking a chance to do a big upload of what is working (I'm not uploading th
 command like last time because that list is getting long).
    * Basic CRUD operations are working and have been tested
    * Unique print formats for Drawer, Page, Node, and NodeArray
-#   * Created another structure, NodeArray, to handle storing arrays within a Node
+   * Created another structure, NodeArray, to handle storing arrays within a Node
    * Functions for both adding a new NodeArray to a Node that already stores an array and for adding Nodes to an
    existing NodeArray
    * Updating the value of a Node, whether or not that Node is part of an array
