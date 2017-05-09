@@ -2,8 +2,8 @@
 
 # Maze Game
 
-This program started as a test bed for the graphics based navigation system for an RPG that I was trying to refactor from C++ 
-but was scaled down to be used for a class project.
+This program started as a test bed for the graphics based navigation system for an RPG that I was trying to refactor from 
+[C++](../../cplusplus/textgame) but was scaled down to be used for a class project.
 
 ## sqlite3
 
