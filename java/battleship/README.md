@@ -47,3 +47,5 @@ that the ship is sunk, the 'AI' goes back to randomly searching the board.
 
 If you've seen anything else I've put up here, you see I like a challenge. So, I'm working on refactoring this
 program into other languages. See the links below to the same program in other languages.
+
+* [Python](../../python/battleship)
