@@ -2,6 +2,17 @@
 
 I will try to add to this list when I make some break throughs
 
+* 9 May
+
+I really need to get better about making these updates. Since my last update, in addition to starting a new job,
+I've made some progress on a few things.
+   * Removed the NodeArray and replaced with the ForeignKeyList to handle relationships between other pages
+   * The new ForeignKeyList system allows for *n*-to-*n* relationships (one-to-one, one-to-many, and many-to-many)
+   * Went through two iterations of getting user input, the first was a seperate class but that was recently replaced
+   with an interface to handle String and Integer input and handle the confirmation before deleting an object
+   * Reworked the print functions from individual toString overrides within each level and moved the print functionality
+   into another interface
+
 * 24 April
 So I haven't updated this list as regularly as I wanted to but I've reached a break point in the work so
 I am taking a chance to do a big upload of what is working (I'm not uploading the output from the help
@@ -66,4 +77,4 @@ selectpage: Set a page as the active page by providing the Page ID
    * Exporting to and importing from a JSON file
    * Parsing the imported data from a list of nodes into the NPDF format
       
-[Back to the start](readme.md) | [JSON](json.md) | [Commands](commands.md)
+[Back to the start](readme.md) | [ForeignKeyList](fkl.md) | [JSON](json.md) | [Commands](commands.md)
