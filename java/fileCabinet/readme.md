@@ -28,11 +28,12 @@ string the key and an object the value (using an object so I can store any data-
 this to also include an ID number of the page and the drawer or collection it belongs to (I'll explain more later).
 Storing a person's first and last name would be two nodes, one for the first name and one for the last name.
 
-### NodeArray
+### ForeignKeyList
 
-The NodeArray is a custom object for handling nodes that store arrays as their value. The example I have been using in 
-testing is groups where each page is one group. One Node is for the name of the group, and another Node is for the 
-members of that group. Each member is a NodeArray that has Nodes for first name, last name, and other identifiers.
+In a previous instance of this page, there was a block called NodeArray, that was used for handling arrays of other nodes.
+That element has been replaced with the ForeignKeyList. Those of you familiar with relational databases will recognize the
+term Foreign Key, but for those of you who do not, a Foreign Key is a reference to a record in another table elsewhere in a
+database. See [this page](fkl.md) for more details about how the ForeignKeyList works in the context of this program.
 
 ## Page
 
