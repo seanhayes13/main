@@ -8,6 +8,8 @@ take me a little time to upload everything, so keep checking back for more.
 
 ### Sections Loaded So Far:
 
+  * [Battleship](battleship)
+    * The final project for a recent Java course
   * [Caesar Cipher](caesarcipher)
     * A Caesar Cipher encryption and decryption program
   * [File Backup](fileBackUp)
@@ -21,7 +23,7 @@ take me a little time to upload everything, so keep checking back for more.
 
 [C++](../cplusplus)
 
-[C*#*](../csharp)
+[C#](../csharp)
 
 [Python](../python)
 
