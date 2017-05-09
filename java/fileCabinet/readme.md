@@ -54,8 +54,9 @@ You guessed it, this is the database itself.
 
 Starting with the FileCabinet, each element has a collection (with Java I used ArrayList) of the next level down:
 
-* FileCabinet has a list of drawer objects
-* Each drawer object has a list of page objects
-* Each page object has a list of node objects
+* FileCabinet has a list of Drawer objects
+* Each Drawer object has a list of Page objects
+* Each Page object has a list of Node objects
+* Each ForeignKeyList also has a list of Node objects to point to other Page objects
 
 [ForeignKeyList](fkl.md) | [Working with JSON](json.md) | [What's Working?](whatworks.md) | [Commands](commands.md)
