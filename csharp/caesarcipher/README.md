@@ -1,6 +1,6 @@
 [C# Main](../)
 
-#Caesar Cipher
+# Caesar Cipher
 
 This is one of those programs that I'm working on writing in multiple languages so you will likely see
 it in my other repositories (if not there yet it should be soon).
@@ -11,9 +11,9 @@ a certain amount.
 
 With a shift of 2, anytime there is an 'a', it is now a 'c'; apple becomes crrng.
 
-# The Code
+## The Code
 
-## Main
+### Main
 
 Nothing too big going on here, just setting up the start of the code and the global alphabet
 string used later on, and a simple menu.
@@ -88,7 +88,7 @@ everything works. I will be updating this code to make those seperate actions.
         }
 ```
 
-## The Moving Parts
+### The Moving Parts
 
 Now for the methods that make this all work. First off, the one key encryption takes in the message
 and the key for encryption. It them creates a new alphabet string by spliting the existing alphabet
