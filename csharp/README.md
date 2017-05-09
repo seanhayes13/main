@@ -8,9 +8,9 @@ sections.
 
 ### Sections Loaded So Far:
 
-  * [Battleship](/battleship)
+  * [Battleship](battleship)
     * A refactored version of a Java program
-  * [Caesar Cipher](/caesarcipher)
+  * [Caesar Cipher](caesarcipher)
     * A Caesar Cipher encryption and decryption program
 
 ### Links to other GitHub Repositories
