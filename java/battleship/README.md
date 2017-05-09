@@ -43,4 +43,7 @@ calling shots at random until getting a hit. After getting a hit, the 'AI' check
 gets a miss, down until it gets a miss, then left and right. After the GameBoard reports back
 that the ship is sunk, the 'AI' goes back to randomly searching the board.
 
-More to come in the next few weeks...
+## Refactor
+
+If you've seen anything else I've put up here, you see I like a challenge. So, I'm working on refactoring this
+program into other languages. See the links below to the same program in other languages.
