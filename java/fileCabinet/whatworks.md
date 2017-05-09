@@ -2,24 +2,23 @@
 
 I will try to add to this list when I make some break throughs
 
-* 9 May
+## 9 May
 
 I really need to get better about making these updates. Since my last update, in addition to starting a new job,
 I've made some progress on a few things.
    * Removed the NodeArray and replaced with the ForeignKeyList to handle relationships between other pages
    * The new ForeignKeyList system allows for *n*-to-*n* relationships (one-to-one, one-to-many, and many-to-many)
-   * Went through two iterations of getting user input, the first was a seperate class but that was recently replaced
-   with an interface to handle String and Integer input and handle the confirmation before deleting an object
+   * Went through two iterations of getting user input, the first was a seperate class but that was recently replaced   with an interface to handle String and Integer input and handle the confirmation before deleting an object
    * Reworked the print functions from individual toString overrides within each level and moved the print functionality
    into another interface
 
-* 24 April
+## 24 April
 So I haven't updated this list as regularly as I wanted to but I've reached a break point in the work so
 I am taking a chance to do a big upload of what is working (I'm not uploading the output from the help
 command like last time because that list is getting long).
    * Basic CRUD operations are working and have been tested
    * Unique print formats for Drawer, Page, Node, and NodeArray
-   * Created another structure, NodeArray, to handle storing arrays within a Node
+#   * Created another structure, NodeArray, to handle storing arrays within a Node
    * Functions for both adding a new NodeArray to a Node that already stores an array and for adding Nodes to an
    existing NodeArray
    * Updating the value of a Node, whether or not that Node is part of an array
@@ -29,8 +28,8 @@ command like last time because that list is getting long).
    JavaDoc comments (may upload those here in the near future). Both of these actually helped identify some functions
    that were no longer used.
 
-* 10 April
-  * Added a lot of functionality including the first phases of the engine to control interacting with the FileCabinet, this 
+### 10 April
+  Added a lot of functionality including the first phases of the engine to control interacting with the FileCabinet, this 
   is the actual output from running the help command:
 ```
 clearactivedrawer: Clear the FileCabinet's active drawer and work from the FileCabinet level.
@@ -65,14 +64,16 @@ selectpage: Set a page as the active page by providing the Page ID
 ```
   * The next big project is to work on saving changes, either automatically when a change is made or only when initiated by
   the user
-* 9 April
+
+## 9 April
    * Save and upload FileCabinet and Drawer configurations including name of the FileCabinet and the current next ID
    number for each drawer. Tested by adding a second Drawer of albums with group/artist names
    * Started work on basic command prompt input class. What's working on this?
       * Load a file cabinet
       * Display a list of known commands and their description
       * Exit
-* 8 April
+
+## 8 April
    * Basic Node-Page-Drawer-FileCabinet (NPDF) system tested entering first and last name and age for four people
    * Exporting to and importing from a JSON file
    * Parsing the imported data from a list of nodes into the NPDF format
