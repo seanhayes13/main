@@ -1,10 +1,10 @@
 [Back to Battleship Main](README.md#gridposition)
 
-#GridPosition
+# GridPosition
 
 The GridPosition class defines each of the 100 blocks of the game board with an character row and a integer column.
 
-##generateRandom
+## generateRandom
 
 Uses the Random function to generate a random GridPosition by pulling a number from 1 to 10 and a character
 from a to j, then passing those into a GridPosition constructor.
@@ -18,7 +18,7 @@ from a to j, then passing those into a GridPosition constructor.
 	}
 ```
 
-##parse
+## parse
 
 The parse method takes string input from the user of the grid they are firing at, such as "a,4", splits the string,
 and returns a new GridPosition based on the results of the split. The newly created GridPosition is then used in
@@ -32,7 +32,7 @@ the GameBoard's attack method.
 	}
 ```
 
-##verifyGrid
+## verifyGrid
 
 The verifyGrid method checks that the grid the user enters is a valid position on a standard Battleship game board,
 so no "z,99" calls from a user.
