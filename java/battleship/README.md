@@ -1,6 +1,6 @@
-[Back to Java Main](../)
+ [Back to Java Main](../)
 
-#Battleship
+# Battleship
 
 For my last term on my Bachelor's degree I took a Java class to fill in some space. 
 For the last two labs of the course we had to write Battleship, just between two
@@ -9,28 +9,28 @@ from there we were on our own, for the most part.
 
 I'll be uploading my solution here in the next few weeks but here's is a brief run down.
 
-##Classes
+## Classes
 
-###[Ship](ship.md)
+### [Ship](ship.md)
 
 The Ship class was used as a parent class for each of the individual ships (Carrier,
 Battleship, Cruiser, Submarine, and Destroyer) with only a few functions being overriden.
 
-###[GridPosition](gridPosition.md)
+### [GridPosition](gridPosition.md)
 
 Relatively simple class defining each of the grids on the game board.
 
-###[GameBoard](gameBoard.md)
+### [GameBoard](gameBoard.md)
 
 The GameBoard managed ship placement, a count of shots fired, checking the result of
 a shot during each turn, and a few other things.
 
-###[AttackResult and Orientation](enums.md)
+### [AttackResult and Orientation](enums.md)
 
 Two enum classes to help track the result of an attack and the orientation of a ship
 when placing on the board.
 
-##Extra Credit
+## Extra Credit
 
 The challenge came while writing the code and thinking back to one of my favorite movies:
 WarGames. Specifically the end of the movie when, to stop a nuclear apocalypse, they tell
