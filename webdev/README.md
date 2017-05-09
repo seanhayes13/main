@@ -28,7 +28,7 @@ For live examples of many of these, visit my web site at www.runninmancoding.com
 
 [C++](../cplusplus)
 
-[C*#*](../csharp)
+[C#](../csharp)
 
 [Java](../java)
 
