@@ -11,6 +11,8 @@ I've made some progress on a few things.
    * Went through two iterations of getting user input, the first was a seperate class but that was recently replaced   with an interface to handle String and Integer input and handle the confirmation before deleting an object
    * Reworked the print functions from individual toString overrides within each level and moved the print functionality
    into another interface
+   * At the end of the day I was able to get the sorting function working with a single field (had to completely rewrite
+   a function I had written previously), works with both ascending and descending. Next step: sorting on multiple fields
 
 ## 24 April
 So I haven't updated this list as regularly as I wanted to but I've reached a break point in the work so
