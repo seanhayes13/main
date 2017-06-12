@@ -2,13 +2,28 @@
 
 I will try to add to this list when I make some break throughs
 
+## 12 June
+
+Been a crazy month
+
+* The ForeignKeyList as giving me some problems for a while, especially creating the links in both sides, but 
+  especially when it came to reading them back into the program. The program was saving them in the custom
+  class but after saving to file they were being read back in as a LinkedHashMap which required a conversion.
+  All of that work was an exercise in futility since I have changed the basic storage structure and switched from
+  JSON to XML.
+* Oh, yeah, I switched from JSON to XML. Save cleaner, and allowed me more flexibility when saving, not to mention 
+  reducing the amount of code that was getting taken up by checking if the FKL was in the proper format or in a LinkedHashMap and converting to the proper format if needed.
+* Started the first draft of a possible GUI, trying to keep it as simple as possible. Right now it is a single panel with three sub-panels, plus the command entry text-field.
+* All previous 'interfaces' were reworked and grouped together as utilities.
+* As part of moving from JSON to XML I reorganized the structure a little bit. Instead of one Node handling everything, including have other class objects as the value, I decided to change to having an abstract BaseNode with several other Nodes extending it. The change and reorganization has actually made things a little easier to work with even if it did require adding half a dozen more classes and making changes of some degree to almost every part of the program.
+
 ## 9 May
 
 I really need to get better about making these updates. Since my last update, in addition to starting a new job,
 I've made some progress on a few things.
    * Removed the NodeArray and replaced with the ForeignKeyList to handle relationships between other pages
    * The new ForeignKeyList system allows for *n*-to-*n* relationships (one-to-one, one-to-many, and many-to-many)
-   * Went through two iterations of getting user input, the first was a seperate class but that was recently replaced   with an interface to handle String and Integer input and handle the confirmation before deleting an object
+   * Went through two iterations of getting user input, the first was a seperate class but that was recently replaced with an interface to handle String and Integer input and handle the confirmation before deleting an object
    * Reworked the print functions from individual toString overrides within each level and moved the print functionality
    into another interface
    * At the end of the day I was able to get the sorting function working with a single field (had to completely rewrite
@@ -80,4 +95,4 @@ selectpage: Set a page as the active page by providing the Page ID
    * Exporting to and importing from a JSON file
    * Parsing the imported data from a list of nodes into the NPDF format
       
-[Back to the start](readme.md) | [ForeignKeyList](fkl.md) | [JSON](json.md) | [Commands](commands.md)
+[Back to the start](readme.md) | [ForeignKeyList](fkl.md) | [XML](xml.md) | [Commands](commands.md)
