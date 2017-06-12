@@ -13,7 +13,7 @@ bed and began working (nice thing about working night shifts and staying on the 
 that there is no one to bug me for 6-8 hours).
 
 First night of coding and in under 5 hours I built the basic structure of objects (see below) and worked out the first steps
-of reading to and from JSON files.
+of reading to and from JSON files (I have since changed to using XML).
 
 # The Structure
 
@@ -27,6 +27,16 @@ Basic building block, these are the data on the pages, like fields on a relation
 string the key and an object the value (using an object so I can store any data-type) but further developments expanded 
 this to also include an ID number of the page and the drawer or collection it belongs to (I'll explain more later).
 Storing a person's first and last name would be two nodes, one for the first name and one for the last name.
+
+### Different Nodes
+
+There are 6 types of Nodes
+* String
+* Integer
+* Double
+* Boolean
+* Array
+* Foreign Key List
 
 ### ForeignKeyList
 
@@ -59,4 +69,4 @@ Starting with the FileCabinet, each element has a collection (with Java I used A
 * Each Page object has a list of Node objects
 * Each ForeignKeyList also has a list of Node objects to point to other Page objects
 
-[ForeignKeyList](fkl.md) | [Working with JSON](json.md) | [What's Working?](whatworks.md) | [Commands](commands.md)
+[ForeignKeyList](fkl.md) | [Working with JSON](xml.md) | [What's Working?](whatworks.md) | [Commands](commands.md)
