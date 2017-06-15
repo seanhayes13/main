@@ -2,6 +2,15 @@
 
 I will try to add to this list when I make some break throughs
 
+## 14 June
+
+So I'm putting up this update because I'm going to be busy for the next couple weeks. Making some big changes:
+* Adding another level of storage, the Folder, between Drawer and Page. Still going to leave the option of storing Pages in Drawers, but the primary location for them will be in Folders.
+* With the introduction of the Folder level I am changing the way that the ForeignKeyList stores link information. Instead of a String that gets parsed out and used, I'm building a new object to store the different pieces of information (Drawer and Folder name and Page ID).
+* Folders will be one level deep for now. Once this change is complete and working, I plan to look into having Folders within Folders, the hold up at this point is how to store them in the new ForeignLink objects.
+* Also creating a new object for storing criteria for filtering. This is a new requirement that came from the GUI development.
+* Speaking of GUI Development, the inital development phases are complete, early tests are complete. Had to make some changes to the setup that are mostly cosmetic. One thing that couldn't carryover (at least not at this point) was most of the batch commands.
+
 ## 12 June
 
 Been a crazy month
