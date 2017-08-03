@@ -2,6 +2,12 @@
 
 I will try to add to this list when I make some break throughs
 
+## 3 August
+
+Clearly I'm not a blog writer. But I have been busy the last two months. More on the new content later but for now:
+* GUI went through a major overhaul thanks to learning about JTrees while reading Core Java, Volume 2 (great book), the biggest benefit of the new change is a more visually friendly view of the FileCabinets (note the plural) making it easier to navigate around. Still working on a few things.
+* Implemented three Array nodes (StringArray, IntegerArray, DoubleArray) for holding arrays. Still need to run some testing, including the command line interaction.
+
 ## 14 June
 
 So I'm putting up this update because I'm going to be busy for the next couple weeks. Making some big changes:
