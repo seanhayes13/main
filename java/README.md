@@ -12,6 +12,8 @@ take me a little time to upload everything, so keep checking back for more.
     * The final project for a recent Java course
   * [Caesar Cipher](caesarcipher)
     * A Caesar Cipher encryption and decryption program
+  * [Distributed Processing](distributedProcessing)
+    * A simple proof of concept for a distributed processing program using multithreading
   * [File Backup](fileBackUp)
     * A tool I wrote to help backup code files from multiple locations at once
   * [FileCabinet](fileCabinet)
