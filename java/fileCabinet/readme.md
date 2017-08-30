@@ -24,18 +24,18 @@ cabinet (guess where I got the name) with drawers, each drawer holds papers that
 ## Node
 
 Basic building block, these are the data on the pages, like fields on a relational table. Started off with two members, a 
-string the key and an object the value (using an object so I can store any data-type) but further developments expanded 
-this to also include an ID number of the page and the drawer or collection it belongs to (I'll explain more later).
-Storing a person's first and last name would be two nodes, one for the first name and one for the last name.
+string the key and the value. Storing a person's first and last name would be two nodes, one for the first name and one for the last name.
 
 ### Different Nodes
 
-There are 6 types of Nodes
+There are 8 types of Nodes
 * String
 * Integer
 * Double
 * Boolean
-* Array
+* String Array
+* Integer Array
+* Double Array
 * Foreign Key List
 
 ### ForeignKeyList
@@ -48,13 +48,15 @@ database. See [this page](fkl.md) for more details about how the ForeignKeyList 
 ## Page
 
 Groupings of related nodes, for those relational database users, this is equivalent to a record on a table. So each person
-would have their own page. Each page would get an ID from the drawer it resides in. This ID would also be applied to each
-of the nodes on the page (again, more on why I set it up like this to follow).
+would have their own page. Each page would get an ID from the Drawer or Folder it resides in.
+
+## Folder
+
+An additional layer of organization to group related Pages. The structure is very similar to file organization found in many operating systems. Folders can consist of Pages and/or other Folders.
 
 ## Drawer
 
-The equivalent of collections in MongoDB or tables from a relational database. The drawer keeps track of the last used ID
-and this information is saved as part of the configuration files.
+The equivalent of collections in MongoDB or tables from a relational database. The Drawer keeps track of the last used ID for creating new Pages and this information is saved as part of the configuration files. Drawers can also have a collection of Folders.
 
 ## FileCabinet
 
@@ -65,8 +67,8 @@ You guessed it, this is the database itself.
 Starting with the FileCabinet, each element has a collection (with Java I used ArrayList) of the next level down:
 
 * FileCabinet has a list of Drawer objects
-* Each Drawer object has a list of Page objects
+* Each Drawer object has two lists: one of Folder and one of Pages
 * Each Page object has a list of Node objects
-* Each ForeignKeyList also has a list of Node objects to point to other Page objects
+* Each ForeignKeyList has a list of ForeignLinks to point to other Page objects
 
 [ForeignKeyList](fkl.md) | [Working with JSON](xml.md) | [What's Working?](whatworks.md) | [Commands](commands.md)
