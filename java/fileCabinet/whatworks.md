@@ -2,6 +2,13 @@
 
 I will try to add to this list when I make some break throughs
 
+## 30 August
+
+Been a productive month.
+* The original GUI plan went through a complete change (as stated before) and many of the commands available in the command prompt version are now working in the GUI version. The ability to create relationships between Pages was tricky but I managed to get it working. 
+* I'm currently working on getting both versions on the same sheet of music so features can be tested in both versions and when I begin moving forward again I can develop and test both environments at the same time. 
+* One of the big things I am working on is to modify the FileCabinetEngine class (which has the majority of the code needed to make everything work, which is why it has been called the Engine) so that the GUI will use the existing, proven code (D.R.Y.).
+
 ## 3 August
 
 Clearly I'm not a blog writer. But I have been busy the last two months. More on the new content later but for now:
