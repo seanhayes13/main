@@ -24,6 +24,7 @@ the movie-actor example, I have two drawers: movies and actors. Within each draw
 and actor. When I build a relationship in the actors Drawer to a movie, I provide:
 
 * The name of the far-side drawer in this case 'movies'
+* The Folder path, if applicable, with each Folder seperated by a pipe "|"
 * The Page ID of the Page to link to
 * The name of the list on the near side (in the actors Drawer)
 * The name of the list on the far-side (in the movies Drawer)
