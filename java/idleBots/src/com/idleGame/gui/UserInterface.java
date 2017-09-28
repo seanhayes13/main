@@ -3,6 +3,7 @@ package com.idleGame.gui;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,17 +13,44 @@ import javax.swing.JTextField;
 
 import com.idleGame.BotList;
 import com.idleGame.actions.IdleGameActions;
+import com.idleGame.bots.AlphaBot;
+import com.idleGame.bots.BasicBot;
 
 public class UserInterface {
-	private IdleGameActions iga;
+	//public long balance = 1;
+	
+	//private IdleGameActions iga;
 	private BotList bl;
 	
+	public BotList getBl() {
+		return bl;
+	}
+
+	public void setBl(BotList bl) {
+		this.bl = bl;
+	}
+
+	private ArrayList<BotPanel> botPanels = new ArrayList<>();
+	
+	public ArrayList<BotPanel> getBotPanels() {
+		return botPanels;
+	}
+
+	public void setBotPanels(ArrayList<BotPanel> botPanels) {
+		this.botPanels = botPanels;
+	}
+
 	private JFrame frame;
 	private JPanel pane;
 	
 	public JTextField basicCounter;
+	public JTextField basicCost;
 	public JTextField alphaCounter;
+	public JTextField alphaCost;
 	public JTextField balanceDisplay;
+	
+	public JButton basicAddBtn;
+	public JButton alphaAddBtn;
 	
 	public void display(){
 		frame = new JFrame("Idle Bots");
@@ -45,52 +73,76 @@ public class UserInterface {
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.anchor = GridBagConstraints.CENTER;
 
-		JLabel basicLabel = new JLabel("Basic Bots");
-		pane.add(basicLabel,gbc);
-		gbc.gridy = 1;
-		basicCounter = new JTextField();
-		basicCounter.setEditable(false);
-		basicCounter.setText(String.valueOf(1));
-		pane.add(basicCounter,gbc);
-		gbc.gridy = 2;
-		JButton basicAddBtn = new JButton("Build Basic Bot");
-		basicAddBtn.setActionCommand("addbasic");
-		basicAddBtn.addActionListener(iga);
-		pane.add(basicAddBtn,gbc);
-		gbc.gridy = 0;
-		gbc.gridx = 1;
-
-		JLabel alphaLabel = new JLabel("Alpha Bots");
-		pane.add(alphaLabel,gbc);
-		gbc.gridy = 1;
-		alphaCounter = new JTextField();
-		alphaCounter.setText("0");
-		alphaCounter.setEditable(false);
-		pane.add(alphaCounter,gbc);
-		gbc.gridy = 2;
-		JButton alphaAddBtn = new JButton("Build Alpha Bot");
-		alphaAddBtn.setActionCommand("addalpha");
-		alphaAddBtn.addActionListener(iga);
-		pane.add(alphaAddBtn,gbc);
+//		JLabel basicLabel = new JLabel("Basic Bots");
+//		pane.add(basicLabel,gbc);
+//		gbc.gridy++;
+//		basicCounter = new JTextField();
+//		basicCounter.setEditable(false);
+//		basicCounter.setText(String.valueOf(1));
+//		pane.add(basicCounter,gbc);
+//		gbc.gridy++;
+//		basicCost = new JTextField();
+//		basicCost.setEditable(false);
+//		basicCost.setText(String.valueOf(1));
+//		pane.add(basicCost,gbc);
+//		gbc.gridy++;
+//		basicAddBtn = new JButton("Build Basic Bot");
+//		basicAddBtn.setActionCommand("addbasic");
+//		basicAddBtn.addActionListener(iga);
+//		pane.add(basicAddBtn,gbc);
+//		gbc.gridy = 0;
+//		gbc.gridx = 1;
+//
+//		JLabel alphaLabel = new JLabel("Alpha Bots");
+//		pane.add(alphaLabel,gbc);
+//		gbc.gridy++;
+//		alphaCounter = new JTextField();
+//		alphaCounter.setText("0");
+//		alphaCounter.setEditable(false);
+//		pane.add(alphaCounter,gbc);
+//		gbc.gridy++;
+//		alphaCost = new JTextField();
+//		alphaCost.setEditable(false);
+//		alphaCost.setText(String.valueOf(1));
+//		pane.add(alphaCost,gbc);		
+//		gbc.gridy++;
+//		alphaAddBtn = new JButton("Build Alpha Bot");
+//		alphaAddBtn.setActionCommand("addalpha");
+//		alphaAddBtn.addActionListener(iga);
+//		pane.add(alphaAddBtn,gbc);
+		
+		BotPanel bp = new BotPanel(new BasicBot(), this);
+		bp.buildPanel();
+		botPanels.add(bp);
+		pane.add(bp, gbc);
+		
+		gbc.gridx++;
+		bp = new BotPanel(new AlphaBot(), this);
+		bp.buildPanel();
+		bp.disablePanel();
+		botPanels.add(bp);
+		pane.add(bp, gbc);
+		
+		//Repeat later for additional bots
 		
 		gbc.gridx = 0;
-		gbc.gridy = 3;
+		gbc.gridy = 2;
 		JLabel balanceLabel = new JLabel("Balance");
 		pane.add(balanceLabel, gbc);
 		balanceDisplay = new JTextField();
-		balanceDisplay.setText(String.valueOf(0));
+		balanceDisplay.setText(String.valueOf(1));
 		balanceDisplay.setEditable(false);
 		gbc.gridx = 1;
 		pane.add(balanceDisplay,gbc);
 	}
 	
-	public void setIGA(IdleGameActions i){
-		iga = i;
-	}
-	
-	public IdleGameActions getIGA(){
-		return iga;
-	}
+//	public void setIGA(IdleGameActions i){
+//		iga = i;
+//	}
+//	
+//	public IdleGameActions getIGA(){
+//		return iga;
+//	}
 	
 	public void setBotList(BotList b){
 		bl = b;

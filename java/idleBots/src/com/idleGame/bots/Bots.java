@@ -11,7 +11,8 @@ public abstract class Bots {
 	protected int rate;
 	protected int amount;
 	protected String type;
-	private ArrayList<Integer> discountBreaks = (ArrayList<Integer>) Arrays.asList(10,25,50,100);
+	protected int cost;
+	//private ArrayList<Integer> discountBreaks = (ArrayList<Integer>) Arrays.asList(10,25,50,100);
 	
 	public int count;
 	
@@ -31,4 +32,19 @@ public abstract class Bots {
 	public int getRate(){
 		return rate;
 	}
+	
+	public void increaseCost(){
+		cost +=1;
+	}
+	
+	public int getCost(){
+		return cost;
+	}
+	
+	/*
+	 * Need to write a method to set the time reduction and rate increase
+	 * based on how the count of each bot. This will need to account for
+	 * situations where further reductions become impossible (reducing rate
+	 * when rate is already at 1
+	 */
 }

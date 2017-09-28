@@ -10,7 +10,7 @@ public class BotThread implements Runnable {
 	private Instant timeNow;
 	private UserInterface ui;
 	private Bots bot;
-	private long balance;
+	//private long balance;
 	private long diff;
 
 	public BotThread(Bots b, Instant s, UserInterface u) {
@@ -35,9 +35,14 @@ public class BotThread implements Runnable {
 			if (diff >= bot.getRate() /*&& (diff % bot.getRate() == 0)*/) {
 				System.out.println("Adding " + bot.getAmount() + " from " + bot.getType());
 				//balance += bot.getAmount();
-				int newBalance = Integer.parseInt(ui.balanceDisplay.getText());
-				newBalance += bot.getAmount();
-				ui.balanceDisplay.setText(String.valueOf(newBalance));
+				int balance = Integer.parseInt(ui.balanceDisplay.getText());
+				balance +=bot.getAmount();
+				System.out.println("Updating balance to " + balance);
+				ui.balanceDisplay.setText(String.valueOf(balance));
+				//check balance and update buttons
+				//This section may provide an opening for using the template panel concept
+				//from FileCabinets: load basic and alpha, after user purchases the first alpha
+				//the bravo panel will get loaded
 				resetDiff();
 			} else {
 				System.out.println("hmmm" + diff);

@@ -23,21 +23,41 @@ public class IdleGameActions implements ActionListener{
 	public void actionPerformed(ActionEvent event) {
 		String action = event.getActionCommand();
 		if(action.equals("addbasic")){
-			System.out.println("Adding basic bot");
-			ui.balanceDisplay.setText(String.valueOf(Integer.parseInt(ui.balanceDisplay.getText())-1));
-			bots.getBasicBot().increaseCount();
-			ui.basicCounter.setText(String.valueOf(bots.getBasicBot().count));
-		} if(action.equals("addalpha")){
-			System.out.println("Adding alpha bot");
-			if(bots.getBots().contains("alpha")){
-				bots.getAlphaBot().increaseCount();
+			if(Integer.parseInt(ui.basicCost.getText())>Integer.parseInt(ui.balanceDisplay.getText())){
+				System.out.println("Adding basic bot");
+				int cost = bots.getBasicBot().getCost();
+				ui.balanceDisplay.setText(String.valueOf(Integer.parseInt(ui.balanceDisplay.getText())-cost));
+				bots.getBasicBot().increaseCost();
+				bots.getBasicBot().increaseCount();
+				ui.basicCounter.setText(String.valueOf(bots.getBasicBot().count));
+				ui.basicCost.setText(String.valueOf(bots.getBasicBot().getCost()));				
 			} else {
-				AlphaBot alpha = new AlphaBot();
-				bots.addBot(alpha);
-				BotThread alphaBT = new BotThread(alpha,Instant.now(),ui);
-				alphaBT.run();
+				
 			}
-			ui.alphaCounter.setText(String.valueOf(bots.getAlphaBot().count));
+		} if(action.equals("addalpha")){
+			if(Integer.parseInt(ui.alphaCost.getText())>Integer.parseInt(ui.balanceDisplay.getText())){
+				System.out.println("Adding alpha bot");
+				if(bots.getBots().contains("alpha")){
+					bots.getAlphaBot().increaseCount();
+					ui.balanceDisplay.setText(String.valueOf(Integer.parseInt(ui.balanceDisplay.getText())-1));
+				} else {
+					AlphaBot alpha = new AlphaBot();
+					bots.addBot(alpha);
+				}
+				ui.alphaCounter.setText(String.valueOf(bots.getAlphaBot().count));				
+			} else {
+				
+			}
 		}
+	}
+	
+	private void updateBtns(){
+		//basic
+		if(Integer.parseInt(ui.balanceDisplay.getText())>bots.getBasicBot().getCost()){
+			ui.basicAddBtn.setEnabled(true);
+		} else {
+			ui.basicAddBtn.setEnabled(false);
+		}
+		//alpha
 	}
 }

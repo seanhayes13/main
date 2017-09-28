@@ -2,6 +2,8 @@ package com.idleGame;
 
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import com.idleGame.bots.AlphaBot;
 import com.idleGame.bots.BasicBot;
@@ -10,15 +12,21 @@ import com.idleGame.gui.UserInterface;
 
 public class BotList {
 	protected ArrayList<String> bots = new ArrayList<>();
-	protected long balance;
 	protected BasicBot basicBot;
 	protected AlphaBot alphaBot;
 	private UserInterface ui;
 	
+	private ExecutorService pool = Executors.newFixedThreadPool(2);
+	
+	public ExecutorService getPool() {
+		return pool;
+	}
+
+	public void setPool(ExecutorService pool) {
+		this.pool = pool;
+	}
+
 	public BotList(UserInterface u){
-		basicBot = new BasicBot();
-		bots.add("basic");
-		balance = 0;
 		ui = u;
 	}
 	
@@ -32,21 +40,24 @@ public class BotList {
 	
 	public void addBot(Bots b){
 		if(b instanceof BasicBot){
+			if(basicBot == null){
+				basicBot = new BasicBot();
+				bots.add("basic");
+				BotThread bt = new BotThread(basicBot,Instant.now(),ui);
+				pool.submit(bt);
+			}
 			basicBot.increaseCount();
 		}
 		if(b instanceof AlphaBot){
 			if(alphaBot == null){
 				alphaBot = new AlphaBot();
 				bots.add("alpha");
+				BotThread bt = new BotThread(alphaBot,Instant.now(),ui);
+				pool.submit(bt);
 			} else {
 				alphaBot.increaseCount();
 			}
 		}
-	}
-	
-	public void start(){
-		BotThread bt = new BotThread(basicBot,Instant.now(),ui);
-		bt.run();
 	}
 
 	public ArrayList<String> getBots() {
