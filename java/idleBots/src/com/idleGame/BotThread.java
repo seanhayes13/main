@@ -5,7 +5,7 @@ import java.time.Instant;
 import com.idleGame.bots.Bots;
 import com.idleGame.gui.UserInterface;
 
-public class BotThread implements Runnable {
+public class BotThread extends Thread {
 	private Instant startTime;
 	private Instant timeNow;
 	private UserInterface ui;
