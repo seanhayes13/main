@@ -7,8 +7,9 @@ import java.util.concurrent.TimeUnit;
 public class ThreadSingletonMain {
 	private static ExecutorService pool = Executors.newFixedThreadPool(100);
 	public static void main(String[] args){
+		System.out.println("Start");
 		ArrayList<TestSingleton> list = new ArrayList<>();
-		for(int i = 0; i < 25; i++){
+		for(int i = 0; i < 10; i++){
 			TestSingleton t = TestSingleton.getInstance();
 			t.buildTracker();
 			list.add(t);
