@@ -1,0 +1,222 @@
+Start
+Automaton ID: 1 Added: k:0 - v: 23
+Automaton ID: 9 Added: k:0 - v: 71
+Automaton ID: 4 Added: k:0 - v: 58
+Automaton ID: 8 Added: k:0 - v: 5
+Automaton ID: 5 Added: k:0 - v: 68
+Automaton ID: 1 - TestSingleton Count: 8
+Automaton ID: 7 Added: k:0 - v: 87
+Automaton ID: 2 Added: k:0 - v: 40
+Automaton ID: 3 Added: k:0 - v: 93
+Automaton ID: 0 Added: k:0 - v: 13
+Automaton ID: 6 Added: k:0 - v: 49
+Automaton ID: 0 - TestSingleton Count: 10
+Automaton ID: 3 - TestSingleton Count: 10
+Automaton ID: 2 - TestSingleton Count: 10
+Automaton ID: 7 - TestSingleton Count: 10
+Automaton ID: 5 - TestSingleton Count: 10
+Automaton ID: 8 - TestSingleton Count: 10
+Automaton ID: 4 - TestSingleton Count: 10
+Automaton ID: 9 - TestSingleton Count: 9
+Automaton ID: 6 - TestSingleton Count: 10
+Automaton ID: 1 Added: k:1 - v: 77
+Automaton ID: 0 Added: k:1 - v: 98
+Automaton ID: 1 - TestSingleton Count: 12
+Automaton ID: 0 - TestSingleton Count: 12
+Automaton ID: 2 Added: k:1 - v: 56
+Automaton ID: 2 - TestSingleton Count: 13
+Automaton ID: 3 Added: k:1 - v: 56
+Automaton ID: 3 - TestSingleton Count: 14
+Automaton ID: 4 Added: k:1 - v: 81
+Automaton ID: 4 - TestSingleton Count: 16
+Automaton ID: 5 Added: k:1 - v: 49
+Automaton ID: 5 - TestSingleton Count: 16
+Automaton ID: 6 Added: k:1 - v: 95
+Automaton ID: 7 Added: k:1 - v: 52
+Automaton ID: 6 - TestSingleton Count: 18
+Automaton ID: 7 - TestSingleton Count: 18
+Automaton ID: 8 Added: k:1 - v: 62
+Automaton ID: 8 - TestSingleton Count: 19
+Automaton ID: 9 Added: k:1 - v: 36
+Automaton ID: 9 - TestSingleton Count: 20
+Automaton ID: 0 Added: k:2 - v: 60
+Automaton ID: 0 - TestSingleton Count: 21
+Automaton ID: 1 Added: k:2 - v: 44
+Automaton ID: 1 - TestSingleton Count: 22
+Automaton ID: 2 Added: k:2 - v: 1
+Automaton ID: 2 - TestSingleton Count: 23
+Automaton ID: 3 Added: k:2 - v: 14
+Automaton ID: 3 - TestSingleton Count: 24
+Automaton ID: 4 Added: k:2 - v: 11
+Automaton ID: 4 - TestSingleton Count: 25
+Automaton ID: 5 Added: k:2 - v: 21
+Automaton ID: 5 - TestSingleton Count: 26
+Automaton ID: 6 Added: k:2 - v: 23
+Automaton ID: 6 - TestSingleton Count: 27
+Automaton ID: 7 Added: k:2 - v: 41
+Automaton ID: 7 - TestSingleton Count: 28
+Automaton ID: 8 Added: k:2 - v: 41
+Automaton ID: 8 - TestSingleton Count: 29
+Automaton ID: 9 Added: k:2 - v: 63
+Automaton ID: 9 - TestSingleton Count: 30
+Automaton ID: 0 Added: k:3 - v: 77
+Automaton ID: 0 - TestSingleton Count: 31
+Automaton ID: 1 Added: k:3 - v: 33
+Automaton ID: 1 - TestSingleton Count: 32
+Automaton ID: 2 Added: k:3 - v: 65
+Automaton ID: 2 - TestSingleton Count: 33
+Automaton ID: 3 Added: k:3 - v: 86
+Automaton ID: 3 - TestSingleton Count: 34
+Automaton ID: 4 Added: k:3 - v: 62
+Automaton ID: 4 - TestSingleton Count: 35
+Automaton ID: 5 Added: k:3 - v: 76
+Automaton ID: 5 - TestSingleton Count: 36
+Automaton ID: 6 Added: k:3 - v: 2
+Automaton ID: 6 - TestSingleton Count: 37
+Automaton ID: 7 Added: k:3 - v: 44
+Automaton ID: 7 - TestSingleton Count: 38
+Automaton ID: 8 Added: k:3 - v: 38
+Automaton ID: 8 - TestSingleton Count: 39
+Automaton ID: 9 Added: k:3 - v: 71
+Automaton ID: 9 - TestSingleton Count: 40
+Automaton ID: 0 Added: k:4 - v: 77
+Automaton ID: 0 - TestSingleton Count: 41
+Automaton ID: 1 Added: k:4 - v: 76
+Automaton ID: 1 - TestSingleton Count: 42
+Automaton ID: 2 Added: k:4 - v: 80
+Automaton ID: 2 - TestSingleton Count: 43
+Automaton ID: 3 Added: k:4 - v: 84
+Automaton ID: 3 - TestSingleton Count: 44
+Automaton ID: 4 Added: k:4 - v: 95
+Automaton ID: 4 - TestSingleton Count: 45
+Automaton ID: 5 Added: k:4 - v: 27
+Automaton ID: 5 - TestSingleton Count: 46
+Automaton ID: 6 Added: k:4 - v: 84
+Automaton ID: 6 - TestSingleton Count: 47
+Automaton ID: 7 Added: k:4 - v: 67
+Automaton ID: 7 - TestSingleton Count: 48
+Automaton ID: 8 Added: k:4 - v: 86
+Automaton ID: 8 - TestSingleton Count: 49
+Automaton ID: 9 Added: k:4 - v: 42
+Automaton ID: 9 - TestSingleton Count: 50
+Automaton ID: 0 Added: k:5 - v: 17
+Automaton ID: 0 - TestSingleton Count: 51
+Automaton ID: 1 Added: k:5 - v: 100
+Automaton ID: 1 - TestSingleton Count: 52
+Automaton ID: 2 Added: k:5 - v: 83
+Automaton ID: 2 - TestSingleton Count: 53
+Automaton ID: 3 Added: k:5 - v: 84
+Automaton ID: 3 - TestSingleton Count: 54
+Automaton ID: 4 Added: k:5 - v: 20
+Automaton ID: 4 - TestSingleton Count: 55
+Automaton ID: 5 Added: k:5 - v: 52
+Automaton ID: 5 - TestSingleton Count: 56
+Automaton ID: 6 Added: k:5 - v: 82
+Automaton ID: 6 - TestSingleton Count: 57
+Automaton ID: 7 Added: k:5 - v: 16
+Automaton ID: 7 - TestSingleton Count: 58
+Automaton ID: 8 Added: k:5 - v: 38
+Automaton ID: 8 - TestSingleton Count: 59
+Automaton ID: 9 Added: k:5 - v: 83
+Automaton ID: 9 - TestSingleton Count: 60
+Automaton ID: 0 Added: k:6 - v: 49
+Automaton ID: 0 - TestSingleton Count: 61
+Automaton ID: 1 Added: k:6 - v: 43
+Automaton ID: 1 - TestSingleton Count: 62
+Automaton ID: 2 Added: k:6 - v: 29
+Automaton ID: 2 - TestSingleton Count: 63
+Automaton ID: 3 Added: k:6 - v: 14
+Automaton ID: 3 - TestSingleton Count: 64
+Automaton ID: 4 Added: k:6 - v: 89
+Automaton ID: 4 - TestSingleton Count: 65
+Automaton ID: 5 Added: k:6 - v: 58
+Automaton ID: 5 - TestSingleton Count: 66
+Automaton ID: 6 Added: k:6 - v: 44
+Automaton ID: 6 - TestSingleton Count: 67
+Automaton ID: 7 Added: k:6 - v: 35
+Automaton ID: 7 - TestSingleton Count: 68
+Automaton ID: 8 Added: k:6 - v: 17
+Automaton ID: 8 - TestSingleton Count: 69
+Automaton ID: 9 Added: k:6 - v: 79
+Automaton ID: 9 - TestSingleton Count: 70
+Automaton ID: 0 Added: k:7 - v: 96
+Automaton ID: 0 - TestSingleton Count: 71
+Automaton ID: 1 Added: k:7 - v: 59
+Automaton ID: 1 - TestSingleton Count: 72
+Automaton ID: 2 Added: k:7 - v: 60
+Automaton ID: 2 - TestSingleton Count: 73
+Automaton ID: 3 Added: k:7 - v: 94
+Automaton ID: 3 - TestSingleton Count: 74
+Automaton ID: 4 Added: k:7 - v: 63
+Automaton ID: 4 - TestSingleton Count: 75
+Automaton ID: 5 Added: k:7 - v: 14
+Automaton ID: 5 - TestSingleton Count: 76
+Automaton ID: 6 Added: k:7 - v: 61
+Automaton ID: 6 - TestSingleton Count: 77
+Automaton ID: 7 Added: k:7 - v: 26
+Automaton ID: 7 - TestSingleton Count: 78
+Automaton ID: 8 Added: k:7 - v: 40
+Automaton ID: 8 - TestSingleton Count: 79
+Automaton ID: 9 Added: k:7 - v: 55
+Automaton ID: 9 - TestSingleton Count: 80
+Automaton ID: 0 Added: k:8 - v: 36
+Automaton ID: 0 - TestSingleton Count: 81
+Automaton ID: 1 Added: k:8 - v: 26
+Automaton ID: 1 - TestSingleton Count: 82
+Automaton ID: 2 Added: k:8 - v: 5
+Automaton ID: 2 - TestSingleton Count: 83
+Automaton ID: 3 Added: k:8 - v: 51
+Automaton ID: 3 - TestSingleton Count: 84
+Automaton ID: 4 Added: k:8 - v: 61
+Automaton ID: 4 - TestSingleton Count: 85
+Automaton ID: 5 Added: k:8 - v: 34
+Automaton ID: 5 - TestSingleton Count: 86
+Automaton ID: 6 Added: k:8 - v: 16
+Automaton ID: 6 - TestSingleton Count: 87
+Automaton ID: 7 Added: k:8 - v: 40
+Automaton ID: 7 - TestSingleton Count: 88
+Automaton ID: 8 Added: k:8 - v: 25
+Automaton ID: 8 - TestSingleton Count: 89
+Automaton ID: 9 Added: k:8 - v: 28
+Automaton ID: 9 - TestSingleton Count: 90
+Automaton ID: 0 Added: k:9 - v: 12
+Automaton ID: 0 - TestSingleton Count: 91
+Final TestSingleton Count: 91
+Automaton ID: 1 Added: k:9 - v: 70
+Automaton ID: 1 - TestSingleton Count: 92
+Final TestSingleton Count: 92
+Automaton ID: 2 Added: k:9 - v: 66
+Automaton ID: 2 - TestSingleton Count: 93
+Final TestSingleton Count: 93
+Automaton ID: 3 Added: k:9 - v: 38
+Automaton ID: 3 - TestSingleton Count: 94
+Final TestSingleton Count: 94
+Automaton ID: 4 Added: k:9 - v: 1
+Automaton ID: 4 - TestSingleton Count: 95
+Final TestSingleton Count: 95
+Automaton ID: 5 Added: k:9 - v: 33
+Automaton ID: 5 - TestSingleton Count: 96
+Final TestSingleton Count: 96
+Automaton ID: 6 Added: k:9 - v: 93
+Automaton ID: 6 - TestSingleton Count: 97
+Final TestSingleton Count: 97
+Automaton ID: 7 Added: k:9 - v: 53
+Automaton ID: 7 - TestSingleton Count: 98
+Final TestSingleton Count: 98
+Automaton ID: 8 Added: k:9 - v: 17
+Automaton ID: 8 - TestSingleton Count: 99
+Final TestSingleton Count: 99
+Automaton ID: 9 Added: k:9 - v: 90
+Automaton ID: 9 - TestSingleton Count: 100
+Final TestSingleton Count: 100
+Finished
+Final count: 100
+Key: 8 - Value: 28
+Key: 1 - Value: 36
+Key: 9 - Value: 90
+Key: 2 - Value: 63
+Key: 3 - Value: 71
+Key: 4 - Value: 42
+Key: 5 - Value: 83
+Key: 6 - Value: 79
+Key: 7 - Value: 55
