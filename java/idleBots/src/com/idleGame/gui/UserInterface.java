@@ -4,6 +4,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -22,13 +23,7 @@ public class UserInterface {
 	//private IdleGameActions iga;
 	private BotList bl;
 	
-	public BotList getBl() {
-		return bl;
-	}
-
-	public void setBl(BotList bl) {
-		this.bl = bl;
-	}
+	private static AtomicInteger cash;
 
 	private ArrayList<BotPanel> botPanels = new ArrayList<>();
 	
@@ -53,10 +48,22 @@ public class UserInterface {
 	public JButton alphaAddBtn;
 	
 	public void display(){
+		if(cash==null){
+			cash = new AtomicInteger(1);
+		}
 		frame = new JFrame("Idle Bots");
 		frame.add(pane);
 //		frame.setSize(800, 800);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		frame.addWindowListener(new java.awt.event.WindowAdapter() {
+		    @Override
+		    public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+		    	System.out.println("Current total cash: " + cash.get());
+		        System.out.println("Shutting down");
+		        System.exit(0);
+		    }
+		});
 		frame.setLocation(300, 100);
 		frame.pack();
 		frame.setVisible(true);
@@ -72,44 +79,6 @@ public class UserInterface {
 		gbc.insets = new Insets(20,20,20,20);
 		gbc.fill = GridBagConstraints.BOTH;
 		gbc.anchor = GridBagConstraints.CENTER;
-
-//		JLabel basicLabel = new JLabel("Basic Bots");
-//		pane.add(basicLabel,gbc);
-//		gbc.gridy++;
-//		basicCounter = new JTextField();
-//		basicCounter.setEditable(false);
-//		basicCounter.setText(String.valueOf(1));
-//		pane.add(basicCounter,gbc);
-//		gbc.gridy++;
-//		basicCost = new JTextField();
-//		basicCost.setEditable(false);
-//		basicCost.setText(String.valueOf(1));
-//		pane.add(basicCost,gbc);
-//		gbc.gridy++;
-//		basicAddBtn = new JButton("Build Basic Bot");
-//		basicAddBtn.setActionCommand("addbasic");
-//		basicAddBtn.addActionListener(iga);
-//		pane.add(basicAddBtn,gbc);
-//		gbc.gridy = 0;
-//		gbc.gridx = 1;
-//
-//		JLabel alphaLabel = new JLabel("Alpha Bots");
-//		pane.add(alphaLabel,gbc);
-//		gbc.gridy++;
-//		alphaCounter = new JTextField();
-//		alphaCounter.setText("0");
-//		alphaCounter.setEditable(false);
-//		pane.add(alphaCounter,gbc);
-//		gbc.gridy++;
-//		alphaCost = new JTextField();
-//		alphaCost.setEditable(false);
-//		alphaCost.setText(String.valueOf(1));
-//		pane.add(alphaCost,gbc);		
-//		gbc.gridy++;
-//		alphaAddBtn = new JButton("Build Alpha Bot");
-//		alphaAddBtn.setActionCommand("addalpha");
-//		alphaAddBtn.addActionListener(iga);
-//		pane.add(alphaAddBtn,gbc);
 		
 		BotPanel bp = new BotPanel(new BasicBot(), this);
 		bp.buildPanel();
@@ -119,7 +88,7 @@ public class UserInterface {
 		gbc.gridx++;
 		bp = new BotPanel(new AlphaBot(), this);
 		bp.buildPanel();
-		bp.disablePanel();
+//		bp.disablePanel();
 		botPanels.add(bp);
 		pane.add(bp, gbc);
 		
@@ -150,5 +119,25 @@ public class UserInterface {
 	
 	public BotList getBotList(){
 		return bl;
+	}
+	
+	public int getCash(){
+		return cash.get();
+	}
+	
+	public void updateCash(int i){
+		cash.addAndGet(i);
+	}
+	
+	public void deductCash(int i){
+		cash.set(cash.get() - i);
+	}
+	
+	public void updateButtons(){
+		for(BotPanel bp : botPanels){
+			if(bp.isEnabled()){
+				bp.checkCost(cash.get());
+			}
+		}
 	}
 }

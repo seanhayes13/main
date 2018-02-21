@@ -12,8 +12,8 @@ import com.idleGame.gui.UserInterface;
 
 public class BotList {
 	protected ArrayList<String> bots = new ArrayList<>();
-	protected BasicBot basicBot;
-	protected AlphaBot alphaBot;
+	protected static BasicBot basicBot;
+	protected static AlphaBot alphaBot;
 	private UserInterface ui;
 	
 	private ExecutorService pool = Executors.newFixedThreadPool(2);
@@ -40,18 +40,19 @@ public class BotList {
 	
 	public void addBot(Bots b){
 		if(b instanceof BasicBot){
-			if(basicBot == null){
+			if(!bots.contains(b.getType())){
 				basicBot = new BasicBot();
-				bots.add("basic");
+				bots.add(basicBot.getType());
 				BotThread bt = new BotThread(basicBot,Instant.now(),ui);
 				pool.submit(bt);
+			} else {
+				basicBot.increaseCount();
 			}
-			basicBot.increaseCount();
 		}
 		if(b instanceof AlphaBot){
-			if(alphaBot == null){
+			if(!bots.contains(b.getType())){
 				alphaBot = new AlphaBot();
-				bots.add("alpha");
+				bots.add(alphaBot.getType());
 				BotThread bt = new BotThread(alphaBot,Instant.now(),ui);
 				pool.submit(bt);
 			} else {
@@ -73,7 +74,7 @@ public class BotList {
 	}
 
 	public void setBasicBot(BasicBot basicBot) {
-		this.basicBot = basicBot;
+		BotList.basicBot = basicBot;
 	}
 
 	public AlphaBot getAlphaBot() {
@@ -81,7 +82,7 @@ public class BotList {
 	}
 
 	public void setAlphaBot(AlphaBot alphaBot) {
-		this.alphaBot = alphaBot;
+		BotList.alphaBot = alphaBot;
 	}
 
 }

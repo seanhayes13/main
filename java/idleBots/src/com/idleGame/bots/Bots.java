@@ -11,17 +11,17 @@ public abstract class Bots {
 	protected int rate;
 	protected int amount;
 	protected String type;
-	protected int cost;
+	//change this to a float and change the increment amount to a fraction of the cost
+	protected double cost;
 	//private ArrayList<Integer> discountBreaks = (ArrayList<Integer>) Arrays.asList(10,25,50,100);
 	
-	public int count;
+	protected int count;
 	
 	public void increaseCount(){
 		count++;
 	}
 	
 	public int getAmount(){
-		
 		return amount * count;
 	}
 	
@@ -34,11 +34,15 @@ public abstract class Bots {
 	}
 	
 	public void increaseCost(){
-		cost +=1;
+		cost *= 1.2;
 	}
 	
 	public int getCost(){
-		return cost;
+		return (int)cost;
+	}
+	
+	public int getCount(){
+		return count;
 	}
 	
 	/*

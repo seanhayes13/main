@@ -29,7 +29,7 @@ public class IdleGameActions implements ActionListener{
 				ui.balanceDisplay.setText(String.valueOf(Integer.parseInt(ui.balanceDisplay.getText())-cost));
 				bots.getBasicBot().increaseCost();
 				bots.getBasicBot().increaseCount();
-				ui.basicCounter.setText(String.valueOf(bots.getBasicBot().count));
+				ui.basicCounter.setText(String.valueOf(bots.getBasicBot().getCount()));
 				ui.basicCost.setText(String.valueOf(bots.getBasicBot().getCost()));				
 			} else {
 				
@@ -44,7 +44,7 @@ public class IdleGameActions implements ActionListener{
 					AlphaBot alpha = new AlphaBot();
 					bots.addBot(alpha);
 				}
-				ui.alphaCounter.setText(String.valueOf(bots.getAlphaBot().count));				
+				ui.alphaCounter.setText(String.valueOf(bots.getAlphaBot().getCount()));				
 			} else {
 				
 			}

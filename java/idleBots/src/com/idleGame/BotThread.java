@@ -32,21 +32,22 @@ public class BotThread extends Thread {
 		boolean check = true;
 		while(check){
 			resetDiff();
-			if (diff >= bot.getRate() /*&& (diff % bot.getRate() == 0)*/) {
-				System.out.println("Adding " + bot.getAmount() + " from " + bot.getType());
-				//balance += bot.getAmount();
-				int balance = Integer.parseInt(ui.balanceDisplay.getText());
-				balance +=bot.getAmount();
-				System.out.println("Updating balance to " + balance);
-				ui.balanceDisplay.setText(String.valueOf(balance));
-				//check balance and update buttons
-				//This section may provide an opening for using the template panel concept
-				//from FileCabinets: load basic and alpha, after user purchases the first alpha
-				//the bravo panel will get loaded
-				resetDiff();
-			} else {
-				System.out.println("hmmm" + diff);
-				resetDiff();
+			if(bot.getCount()>0){
+				if (diff >= bot.getRate() /*&& (diff % bot.getRate() == 0)*/) {
+//					System.out.print("Adding " + bot.getAmount() + " from " + bot.getType());
+					ui.updateCash(bot.getAmount());
+//					System.out.print(" Updating balance to " + ui.getCash()+"\n");
+					ui.balanceDisplay.setText(String.valueOf(ui.getCash()));
+					ui.updateButtons();
+					//check balance and update buttons
+					//This section may provide an opening for using the template panel concept
+					//from FileCabinets: load basic and alpha, after user purchases the first alpha
+					//the bravo panel will get loaded
+					resetDiff();
+				} else {
+					System.out.println("hmmm" + diff);
+					resetDiff();
+				}
 			}
 		}
 	}

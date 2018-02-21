@@ -1,6 +1,6 @@
 package com.idleGame;
 
-import com.idleGame.actions.IdleGameActions;
+import com.idleGame.bots.BasicBot;
 import com.idleGame.gui.UserInterface;
 
 public class IdleGameMain {
@@ -17,30 +17,9 @@ public class IdleGameMain {
 		ui.setUpPane();
 		System.out.println("Pane set up");
 		ui.display();
+		BasicBot startBot = new BasicBot();
+		ui.getBotList().addBot(startBot);
 		System.out.println("Bot list set on interface");
 		System.out.println("Ready to roll");
-//		Instant timeNow;
-//		long sum = 0;
-//		long diff;
-//		int time = 0;
-//		int count = 0;
-//		while(time < 100000){
-//			timeNow = Instant.now();
-//			diff = timeNow.getEpochSecond() - startTime.getEpochSecond();
-//			/*
-//			 * Need to iterate through each array list in in the bots
-//			 * object and run the code below for each of those lists
-//			 */
-////			for(Bots b : bots){
-////				if(diff >= b.getRate() && diff%b.getRate()==0){
-////					System.out.println(count + "- Adding " + b.getRate());
-////					sum += b.getRate();
-////					System.out.println(count + "- sum: "+sum);
-////				}				
-////			}
-//			count++;
-//			time++;
-//			Thread.sleep(1000);
-//		}
 	}
 }

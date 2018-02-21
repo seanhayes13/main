@@ -9,11 +9,13 @@ import java.time.Instant;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import com.idleGame.BotList;
 import com.idleGame.BotThread;
+import com.idleGame.bots.BasicBot;
 import com.idleGame.bots.Bots;
 
 @SuppressWarnings("serial")
@@ -28,6 +30,7 @@ public class BotPanel extends JPanel{
 	public JLabel costLabel;
 	public JTextField botCost;
 	public JButton buyBot;
+	public JButton buyTenBots;
 	
 	private int pos;
 	
@@ -61,7 +64,7 @@ public class BotPanel extends JPanel{
 		gbc.gridx++;
 		botCount = new JTextField(7);
 		botCount.setEditable(false);
-		botCount.setText(String.valueOf(bot.count));
+		botCount.setText(String.valueOf(bot.getCount()));
 		add(botCount,gbc);
 		gbc.gridx = 0;
 		gbc.gridy++;
@@ -78,28 +81,42 @@ public class BotPanel extends JPanel{
 		
 		buyBot = new JButton("Build " + bot.getType() + " Bot");
 		gbc.gridwidth = 2;
+		buyBot.setEnabled(false);
 		buyBot.addActionListener(new ActionListener(){
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				if( (Integer.parseInt(ui.balanceDisplay.getText()) - bot.getCost()) >=0){
+				if( (ui.getCash() - bot.getCost()) >=0){
 					if(!ui.getBotPanels().get(pos+1).active){
 						ui.getBotPanels().get(pos+1).enablePanel();
-						start();
+//						start();
 					}
 					System.out.println("Adding " + bot.getType() +" bot");
 					int cost = bot.getCost();
-					ui.balanceDisplay.setText(String.valueOf(Integer.parseInt(ui.balanceDisplay.getText())-cost));
+					ui.deductCash(cost);
+					ui.getBotList().addBot(bot);
+					ui.balanceDisplay.setText(String.valueOf(ui.getCash()));
 					bot.increaseCost();
 					bot.increaseCount();
-					botCount.setText(String.valueOf(bot.count));
+					botCount.setText(String.valueOf(bot.getCount()));
 					botCost.setText(String.valueOf(bot.getCost()));
 				} else {
-					System.out.println("Oops" + (Integer.parseInt(ui.balanceDisplay.getText()) - bot.getCost()));
+					System.out.println("Oops" + (ui.getCash() - bot.getCost()));
 				}
 			}
 		});
 		add(buyBot,gbc);
+		gbc.gridy++;
+		
+		buyTenBots = new JButton("Build 10 " + bot.getType() + " Bots");
+		buyTenBots.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent event){
+				JOptionPane.showMessageDialog(null, "Not implemented yet");
+			}
+		});
+		buyTenBots.setEnabled(false);
+		add(buyTenBots, gbc);
 	}
 	
 	public void enablePanel(){
@@ -126,8 +143,24 @@ public class BotPanel extends JPanel{
 	}
 	
 	public void start(){
-		BotThread bt = new BotThread(bot,Instant.now(),ui);
-		ui.getBotList().getPool().submit(bt);
+		BasicBot startBot = new BasicBot();
+		ui.getBotList().addBot(startBot);
+	}
+	
+	public void checkCost(int i){
+		//Add check for buyBot button
+//		System.out.println(bot.getType() + " - cost:" + bot.getCost());
+		if((bot.getCost())<= i){
+			buyBot.setEnabled(true);
+		} else {
+			buyBot.setEnabled(false);
+		}
+		if((bot.getCost()*10)<= i){
+			buyTenBots.setEnabled(true);
+		} else {
+			buyTenBots.setEnabled(false);
+		}
+		//Add check for buy100Bots button when we get around to it
 	}
 	
 //	private void checkCost(){
