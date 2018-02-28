@@ -1,13 +1,16 @@
 import java.io.*;
 import java.net.*;
+import java.util.LinkedList;
 import java.util.StringTokenizer;
 import java.util.Vector;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@SuppressWarnings("unused")
 public class ChatServer {
 	private static Vector clientSockets;
 	private Vector loginNames;
-//	private static AtomicInteger idTracker;
+	private static AtomicInteger idTracker;
+	private static LinkedList<Student> students;
 	
 	public ChatServer() throws IOException{
 		System.out.println("ChatServer started");
@@ -15,8 +18,9 @@ public class ChatServer {
 		server = new ServerSocket(5217);
 		clientSockets = new Vector();
 		loginNames = new Vector();
+		students = new LinkedList<>();
 
-//		idTracker = new AtomicInteger(1);
+		idTracker = new AtomicInteger(1);
 		while(true){
 			Socket client;
 			client = server.accept();
@@ -41,6 +45,7 @@ public class ChatServer {
 			clientSockets.add(clientSocket);
 			System.out.println("Chat Server Ready");
 			start();
+			
 		}
 		
 		public void run(){
@@ -51,18 +56,12 @@ public class ChatServer {
 					String loginName = st.nextToken();
 					String msgType = st.nextToken();
 					int io = -1;
-					
-					String msg = "";
-					
-					while(st.hasMoreTokens()){
-						msg = msg+" "+st.nextToken();
-					}
-					
 					if(msgType.equals("LOGIN")){
 						for(int i = 0; i < loginNames.size(); i++){
 							Socket pSocket = (Socket)clientSockets.elementAt(i);
 							DataOutputStream pOut = new DataOutputStream(pSocket.getOutputStream());
 							pOut.writeUTF(loginName + " has logged in");
+//							pOut.writeUTF(m.toString());
 						}
 					} else if(msgType.equals("LOGOUT")){
 						for(int i = 0; i < loginNames.size(); i++){
@@ -77,16 +76,38 @@ public class ChatServer {
 								clientSockets.removeElementAt(io);
 							}
 						}
-					} else {
+					} else if(msgType.equals("DATA")) {						
+						String msg = "";
+						
+						while(st.hasMoreTokens()){
+							msg = msg+" "+st.nextToken();
+						}
 						for(int i = 0; i < loginNames.size(); i++){
 							Socket pSocket = (Socket)clientSockets.elementAt(i);
 							DataOutputStream pOut = new DataOutputStream(pSocket.getOutputStream());
+//							pOut.writeUTF(m.toString());
 							pOut.writeUTF(loginName + ": " + msg);
 						}
+					} else if(msgType.equals("NEW_STUDENT")){
+						String msg = "";
+						String firstNameLabel1 = st.nextToken();
+						String firstNameLabel2 = st.nextToken();
+						String firstName = st.nextToken();
+						String lastNameLabel1 = st.nextToken();
+						String lastNameLabel2 = st.nextToken();
+						String lastName = st.nextToken();
+						Student s = new Student(firstName, lastName, idTracker.incrementAndGet());
+						students.add(s);
+						dout.writeUTF(s.toString());
+						dout.writeUTF("There are now "+ students.size() + " students in the list");
 					}
 					if(msgType.equals("LOGOUT")){
 						break;
 					}
+					
+//					if(din.readObject() instanceof Student){
+//						
+//					}
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -100,7 +121,6 @@ public class ChatServer {
 	}
 	
 	public static void main(String[] args) throws IOException{
-		@SuppressWarnings("unused")
 		ChatServer server = new ChatServer();
 	}
 

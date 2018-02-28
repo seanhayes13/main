@@ -20,6 +20,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+@SuppressWarnings({ "unused", "serial" })
 public class ChatClient extends JFrame implements Runnable{
 	
 	private Socket socket;
@@ -27,8 +28,6 @@ public class ChatClient extends JFrame implements Runnable{
 	private Thread thread;
 	private DataInputStream din;
 	private DataOutputStream dout;
-//	private ObjectInputStream oin;
-//	private ObjectOutputStream oout;
 	private String loginName;
 	private JButton send, logout, newStudent;
 	private JTextField tf;
@@ -44,7 +43,10 @@ public class ChatClient extends JFrame implements Runnable{
 		addWindowListener(new WindowAdapter() {
 			public void windowClose(WindowEvent e) {
 				try {
-					dout.writeUTF(loginName + " " + "LOGOUT");
+					Message m = new Message("LOGOUT",loginName);
+					System.out.println(m.toString());
+					dout.writeUTF(m.toString());
+//					dout.writeUTF(loginName + " " + "LOGOUT");
 					System.exit(1);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
@@ -54,6 +56,7 @@ public class ChatClient extends JFrame implements Runnable{
 		});
 		
 		ta = new JTextArea(18,50);
+		ta.setEditable(false);
 		tf = new JTextField(50);
 		tf.addKeyListener(new KeyListener() {
 
@@ -62,7 +65,10 @@ public class ChatClient extends JFrame implements Runnable{
 				if(e.getKeyCode() == KeyEvent.VK_ENTER) {
 					if(tf.getText().length()>0) {
 						try {
-							dout.writeUTF(loginName+ " " + "DATA " + tf.getText().toString());
+							Message m = new Message("DATA",loginName,tf.getText().toString());
+							System.out.println(m);
+							dout.writeUTF(m.toString());
+//							dout.writeUTF(loginName+ " " + "DATA " + tf.getText().toString());
 							tf.setText("");
 						} catch (IOException e2) {
 							// TODO Auto-generated catch block
@@ -91,7 +97,10 @@ public class ChatClient extends JFrame implements Runnable{
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					dout.writeUTF(loginName+ " " + "DATA " + tf.getText().toString());
+					Message m = new Message("DATA",loginName,tf.getText().toString());
+					System.out.println(m);
+					dout.writeUTF(m.toString());
+//					dout.writeUTF(loginName+ " " + "DATA " + tf.getText().toString());
 					tf.setText("");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -106,7 +115,9 @@ public class ChatClient extends JFrame implements Runnable{
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					dout.writeUTF(loginName+ " " + "LOGOUT ");
+					Message m = new Message("LOGOUT",loginName);
+					dout.writeUTF(m.toString());
+//					dout.writeUTF(loginName+ " " + "LOGOUT ");
 					System.exit(1);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -124,18 +135,28 @@ public class ChatClient extends JFrame implements Runnable{
 				if(firstNameInput.getText().length() > 0 && lastNameInput.getText().length() > 0) {
 					Student s = new Student(firstNameInput.getText(), lastNameInput.getText());
 					System.out.println(s);
+					Message m = new Message("NEW_STUDENT",loginName, s.toString());
+					try {
+						dout.writeUTF(m.toString());
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					tf.setText("");
 				}
 			}
 			
 		});
 		
 		socket = new Socket("localhost",5217);
-		
+
 		din = new DataInputStream(socket.getInputStream());
 		dout = new DataOutputStream(socket.getOutputStream());
-		
 		dout.writeUTF(loginName);
 		dout.writeUTF(loginName + " " +"LOGIN");
+		Message m = new Message("LOGIN",loginName);
+		dout.writeUTF(m.toString());
+		
 		
 		thread = new Thread(this);
 		thread.start();
@@ -186,6 +207,9 @@ public class ChatClient extends JFrame implements Runnable{
 	public void run() {
 		while(true){
 			try {
+//				ta.append("\n"+din.readObject().toString());
+//				Message m = (Message)din.readObject();
+//				ta.append("\n"+m.toString());
 				ta.append("\n"+din.readUTF());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
