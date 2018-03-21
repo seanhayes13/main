@@ -2,6 +2,15 @@
 
 I will try to add to this list when I make some break throughs
 
+## 21 March 2018
+
+I have been working on this, just not updating everything on here.
+* This version (also developing this program in C++, C# and Python) has switched almost exclusively to a GUI only interaction, and it has gone through a lot of changes since August. 
+* Templates now allow users to create, well, templates for creating Pages. So if you wanted to create a series of Pages to store contact information and you wanted to make sure that all of the keys were the same, you would create a template. After creating the template, you would call it up and simply fill in the blanks.
+* Bulk page, folder, and drawer create options allow the user to create multiple pages, folders, or drawers at once. The only limitation right now is only creating 100 pages at a time. Also cannot bulk create different levels at the same time, meaning the user cannot create a series of folders and with 20 pages at the same time (future project).
+* Pulled out an old project and introduced Snippets as a Node type (a Snippet is a larger piece of text like a block of code or a long memo or letter)
+* Still working on a DateNode, more specifically the GUI input panel.
+
 ## 30 August
 
 Been a productive month.
