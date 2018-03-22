@@ -6,12 +6,18 @@ import java.util.Date;
 import emailMain.User;
 import emailMain.EmailMessage;
 import emailMain.EmailServer;
+import emailMain.MainForm;
 
 public class NonJUnitTests {
 	public static void main(String[] args){
 //		testContact();
 //		testMultipleContacts();
-		testEmailMessages();
+//		testEmailMessages();
+		testMainPanel();
+	}
+	
+	private static void testMainPanel(){
+		MainForm mf = new MainForm();
 	}
 	
 	private static void testEmailMessages(){
