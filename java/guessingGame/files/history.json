@@ -1,0 +1,58 @@
+{
+	"questions":[
+		{
+			"question": "What day did the Japanese launch their surprise attack on Pearl Harbor?",
+			"choices":[
+				{
+					"choice":"7 December 1941"
+				},
+				{
+					"choice":"1 September 1936"
+				},
+				{
+					"choice":"6 June 1944"
+				},
+				{
+					"choice":"6 August 1945"
+				}
+			],
+			"correctAnswer":"7 December 1941"
+		},
+		{
+			"question": "Napolean Bonaparte was the leader of which country?",
+			"choices":[
+				{
+					"choice":"Germany"
+				},
+				{
+					"choice":"England"
+				},
+				{
+					"choice":"Japan"
+				},
+				{
+					"choice":"France"
+				}
+			],
+			"correctAnswer":"France"
+		},
+		{
+			"question": "Template",
+			"choices":[
+				{
+					"choice":"Choice 1"
+				},
+				{
+					"choice":"Choice 2"
+				},
+				{
+					"choice":"Choice 3"
+				},
+				{
+					"choice":"Choice 4"
+				}
+			],
+			"correctAnswer":"Correct Answer"
+		}
+	]
+}
